@@ -1,0 +1,16 @@
+class Solution {
+    int countX(int L, int R, int X) {
+        // code here
+        int count=0;
+        char ch=(char)(X+'0');
+        for(int i=L+1;i<=R-1;i++)
+        {
+            String val=String.valueOf(i);
+            for(int j=0;j<val.length();j++)
+            {
+                if(val.charAt(j)==ch)
+                count++;
+            }
+        }
+        return count;
+    }
